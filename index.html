@@ -1,7 +1,170 @@
-<html>
-  <head>
-    <title>agodonnell.com</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  </head>
-  <body><h1>Hello from agodonnell.com</h1></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>agodonnell.com</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <style>
+    :root {
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --card-bg: white;
+      --link: #2563eb;
+      --footer: #6b7280;
+    }
+
+    body.dark-mode {
+      --bg: #1e1e1e;
+      --text: #f3f4f6;
+      --card-bg: #2a2a2a;
+      --link: #93c5fd;
+      --footer: #9ca3af;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: 1px solid var(--text);
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--text);
+      background-color: var(--card-bg);
+      transition: all 0.3s ease;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background: var(--card-bg);
+    }
+
+    .profile {
+      text-align: center;
+      margin-top: -80px;
+    }
+
+    .profile img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--card-bg);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: var(--text);
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .social {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--link);
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--footer);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
+
+  <header>
+    <img src="assets/images/clover.webp" alt="Clover leaves with dew drops">
+  </header>
+
+  <div class="container">
+    <div class="profile">
+      <img src="assets/images/ago.webp" alt="AG O'Donnell Profile Photo">
+    </div>
+
+    <h1>Welcome to agodonnell.com</h1>
+    <p>This site is currently undergoing a thoughtful redesign and content rollout.</p>
+
+    <p>
+      I'm <strong>AG O'Donnell</strong> — a Senior Data Engineer with extensive experience across
+      <strong>Snowflake</strong>, <strong>Databricks</strong>, and <strong>SAS</strong>. My work spans
+      complex data lake ecosystems, where I build scalable, efficient systems using
+      <strong>SQL</strong> and <strong>Python</strong>.
+    </p>
+
+    <p>
+      I bring a background in finance and investment analytics, and I’m especially engaged
+      in the evolving opportunities surrounding <strong>Machine Learning</strong> as the foundation of
+      <strong>Artificial Intelligence</strong>, as well as developments in <strong>Cryptocurrency</strong>
+      infrastructure. More recently, my workflows have expanded to use <strong>Snowflake</strong> as a central
+      platform to connect and monitor sensor data across client sites — including manufacturers and property
+      managers — linking real-time metrics to cloud-native data lakes. This architecture supports intelligent
+      dashboards that help organizations track and optimize energy usage, equipment performance, and
+      operational efficiency.
+    </p>
+
+    <p>
+      Check back soon for updates, technical posts, and new tools.
+    </p>
+
+    <div class="social">
+      <a href="https://www.linkedin.com/in/ag-odonnell-64691ba9/" target="_blank">LinkedIn</a>
+      <a href="https://x.com/AGODonnell" target="_blank">X (Twitter)</a>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 AG O'Donnell · agodonnell.com
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      const isDark = document.body.classList.toggle("dark-mode");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+
+    // Load preference on page load
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
+
+</body>
 </html>
