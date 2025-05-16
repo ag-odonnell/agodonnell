@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>agodonnell.com</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
@@ -105,7 +106,13 @@
     }
   </style>
 </head>
-<body>
+<body 
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
 
   <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
 
@@ -115,32 +122,34 @@
 
   <div class="container">
     <div class="profile">
-      <img src="assets/images/ago.jpg" alt="AG O'Donnell Profile Photo">
+      <img src="assets/images/ago.jpg" alt="A.G.O. Profile Photo">
     </div>
 
-    <h1>Welcome to agodonnell.com</h1>
+    <h1>Welcome to <span>A</span><span>G</span> <span>O</span><span>'</span><span>Donnell</span></h1>
     <p>This site is currently undergoing a thoughtful redesign and content rollout.</p>
 
     <p>
-      I'm <strong>AG O'Donnell</strong> — a Senior Data Engineer with extensive experience across
+      I'm <span><strong>A</strong></span><span><strong>G</strong></span> <span><strong>O</strong></span><span><strong>'</strong></span><span><strong>Donnell</strong></span> —
+      a Senior Data Engineer with extensive experience across
       <strong>Snowflake</strong>, <strong>Databricks</strong>, and <strong>SAS</strong>. My work spans
       complex data lake ecosystems, where I build scalable, efficient systems using
       <strong>SQL</strong> and <strong>Python</strong>.
     </p>
 
     <p>
-      I bring a background in finance and investment analytics, and am especially engaged
-      in the evolving opportunities surrounding <strong>Machine Learning</strong> as the foundation of
-      <strong>Artificial Intelligence</strong>, as well as an strong interest relating to developments 
-      in <strong>Cryptocurrency</strong> infrastructure.
+      I bring a background in finance and investment analytics, with a growing focus on the
+      evolving landscape of <strong>Cryptocurrency</strong> infrastructure and its intersections with
+      modern financial systems. Building on that foundation, my current work emphasizes the expanding
+      role of <strong>Machine Learning</strong> as the backbone of <strong>Artificial Intelligence</strong>,
+      and its practical application across data platforms.
     </p>
 
     <p>
-      More recently, my workflows have expanded to use <strong>Snowflake</strong> as a central
-      platform to connect and monitor sensor data across client sites — including manufacturers and property
-      managers — linking real-time metrics to cloud-native data lakes. This architecture supports intelligent
-      dashboards that help organizations track and optimize energy usage, equipment performance, and
-      operational efficiency.
+      More recently, I've focused efforts on <strong>Snowflake</strong> as a unified platform
+      for integrating and monitoring sensor data across distributed client environments —
+      including manufacturers and property managers. This architecture enables real-time metrics
+      to flow into cloud-native data lakes and supports intelligent dashboards that help
+      organizations monitor energy use, track equipment performance, and optimize operational efficiency.
     </p>
 
     <p>
@@ -154,7 +163,7 @@
     </div>
 
     <div class="footer">
-      &copy; 2025 AG O'Donnell · agodonnell.com
+      &copy; 2025 <span>AG</span> <span>O'Donnell</span> · agodonnell.com
     </div>
   </div>
 
@@ -162,6 +171,20 @@
     function toggleDarkMode() {
       const isDark = document.body.classList.toggle("dark-mode");
       localStorage.setItem("theme", isDark ? "dark" : "light");
+    }
+
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f => 
+        e.key.toLowerCase() === f.key.toLowerCase() && 
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
     }
 
     window.onload = () => {
