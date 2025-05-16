@@ -106,7 +106,8 @@
     }
   </style>
 </head>
-<body 
+
+<body
   oncontextmenu="return false"
   oncopy="return false"
   oncut="return false"
@@ -117,39 +118,48 @@
   <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
 
   <header>
-    <img src="assets/images/clover.webp" alt="Clover leaves with dew drops">
+    <img src="assets/images/clover.webp" alt="Clover leaves with dew drops" />
   </header>
 
   <div class="container">
+
     <div class="profile">
-      <img src="assets/images/ago.jpg" alt="A.G.O. Profile Photo">
+      <img src="assets/images/ago.jpg" alt="AG O'Donnell Profile Photo" />
     </div>
 
-    <h1>Welcome to <span>A</span><span>G</span> <span>O</span><span>'</span><span>Donnell</span></h1>
-    <p>This site is currently undergoing a thoughtful redesign and content rollout.</p>
+    <h1>
+      Welcome to <span>A</span><span>G</span> <span>O</span><span>'</span><span>Donnell</span>
+    </h1>
 
     <p>
-      I'm <span><strong>A</strong></span><span><strong>G</strong></span> <span><strong>O</strong></span><span><strong>'</strong></span><span><strong>Donnell</strong></span> —
-      a Senior Data Engineer with extensive experience across
-      <strong>Snowflake</strong>, <strong>Databricks</strong>, and <strong>SAS</strong>. My work spans
-      complex data lake ecosystems, where I build scalable, efficient systems using
-      <strong>SQL</strong> and <strong>Python</strong>.
+      This site is currently undergoing a thoughtful redesign and content rollout.
     </p>
 
     <p>
-      I bring a background in finance and investment analytics, with a growing focus on the
-      evolving landscape of <strong>Cryptocurrency</strong> infrastructure and its intersections with
-      modern financial systems. Building on that foundation, my current work emphasizes the expanding
-      role of <strong>Machine Learning</strong> as the backbone of <strong>Artificial Intelligence</strong>,
-      and its practical application across data platforms.
+      I'm <span><strong>A</strong></span><span><strong>G</strong></span>
+      <span><strong>O</strong></span><span><strong>'</strong></span><span><strong>Donnell</strong></span> —
+      a Senior Data Engineer with extensive experience across
+      <strong>Snowflake</strong>, <strong>Databricks</strong>, and <strong>SAS</strong>.
+      My work spans complex data lake ecosystems, where I build scalable,
+      efficient systems using <strong>SQL</strong> and <strong>Python</strong>.
+    </p>
+
+    <p>
+      My background is in finance and investment analytics, and my current focus lies in modern data engineering—
+      building scalable infrastructure that supports high-volume, high-value insights.
+      Looking ahead, I’m especially interested in applying <strong>Machine Learning</strong> to these systems
+      and see its role in shaping future applications.
+      I’m also a long-term believer in <strong>Cryptocurrency</strong>, both as a technology and economic system,
+      and openly advocate for its broader adoption—including compensation.
     </p>
 
     <p>
       More recently, I've focused efforts on <strong>Snowflake</strong> as a unified platform
       for integrating and monitoring sensor data across distributed client environments —
-      including manufacturers and property managers. This architecture enables real-time metrics
-      to flow into cloud-native data lakes and supports intelligent dashboards that help
-      organizations monitor energy use, track equipment performance, and optimize operational efficiency.
+      including manufacturers and property managers.
+      This architecture enables real-time metrics to flow into cloud-native data lakes
+      and supports intelligent dashboards that help organizations monitor energy use,
+      track equipment performance, and optimize operational efficiency.
     </p>
 
     <p>
@@ -165,6 +175,7 @@
     <div class="footer">
       &copy; 2025 <span>AG</span> <span>O'Donnell</span> · agodonnell.com
     </div>
+
   </div>
 
   <script>
@@ -181,8 +192,8 @@
         { key: "a", ctrl: true },
         { key: "F12", ctrl: false }
       ];
-      return forbidden.some(f => 
-        e.key.toLowerCase() === f.key.toLowerCase() && 
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
         (f.ctrl === undefined || e.ctrlKey === f.ctrl)
       ) ? false : true;
     }
