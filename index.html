@@ -39,6 +39,27 @@
       display: block;
     }
 
+    .navbar {
+      background-color: var(--card-bg);
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 1rem;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    .navbar a:hover {
+      color: var(--link);
+    }
+
     .toggle-btn {
       position: fixed;
       top: 10px;
@@ -120,6 +141,12 @@
   <header>
     <img src="assets/images/clover.webp" alt="Clover leaves with dew drops" />
   </header>
+
+  <!-- ✅ NEW NAV BAR -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="quotes.html">Quotes</a>
+  </nav>
 
   <div class="container">
 
