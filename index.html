@@ -80,6 +80,22 @@
     .bg-white { background-color: var(--bg-white); }
     .bg-gray { background-color: var(--bg-gray); }
 
+    .quote {
+      font-size: 1.1rem;
+      color: #6b7280;
+      max-width: 800px;
+      margin: 2rem auto 0;
+      text-align: center;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .quote em {
+      color: #9ca3af;
+      font-style: italic;
+      font-weight: 400;
+    }
+
     .section h3 {
       font-size: 1.2rem;
       font-weight: 600;
@@ -87,7 +103,6 @@
       margin-bottom: 0.75rem;
       color: #374151;
       text-transform: uppercase;
-      text-align: center;
     }
 
     .section h3::after {
@@ -206,8 +221,8 @@
       <span>Themes</span>
       <div class="dropdown-content">
         <a href="analytics.html">Analytics</a>
-        <a href="training.html">Training</a>
         <a href="family.html">Family</a>
+        <a href="fitness.html">Fitness</a>
       </div>
     </div>
     <div class="dropdown">
@@ -220,23 +235,26 @@
   </nav>
 
   <div class="section bg-white">
-    <h2>“…while the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”<br><small>— <em style="font-weight: 400; color: #6b7280;">Sir Arthur Conan Doyle</em></small></h2>
+    <div class="quote">
+      “…while the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”
+      <br><em>— Sir Arthur Conan Doyle</em>
+    </div>
   </div>
 
   <div class="section bg-gray">
     <h3>Themes</h3>
     <div class="themes">
+      <a href="family.html">
+        <div class="icon">🏠</div>
+        <div>family</div>
+      </a>
       <a href="analytics.html">
         <div class="icon">🧮</div>
         <div>analytics</div>
       </a>
-      <a href="training.html">
+      <a href="fitness.html">
         <div class="icon">🚴</div>
-        <div>training</div>
-      </a>
-      <a href="family.html">
-        <div class="icon">🏠</div>
-        <div>family</div>
+        <div>fitness</div>
       </a>
     </div>
   </div>
