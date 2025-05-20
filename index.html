@@ -188,8 +188,8 @@
 </head>
 <body>
 <header>
-    <img src="assets/images/clover.webp" alt="Hero Image of Clovers">
-  </header>
+  <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+</header>
 
   <nav class="navbar">
     <div class="dropdown">
@@ -285,9 +285,14 @@
   </div>
 
   <div class="section bg-white">
-    <h3>Connect</h3>
-    <div class="connect-line" id="contactDisplay"></div>
+  <h3>Connect</h3>
+  <div class="connect-line">
+    <div>
+      <span id="emailDisplay"></span><br />
+      <span id="phoneDisplay"></span>
+    </div>
   </div>
+</div>
 
   <div class="footer">
     &copy; MMXXV · AG O'Donnell · agodonnell.com
@@ -302,7 +307,6 @@
     const readableEmail = scrambled.email.join('');
     const readablePhone = scrambled.phone.join('');
 
-    document.getElementById('contactDisplay').innerHTML = `
-      <span>${readableEmail}</span> &nbsp;<span style="font-size: 1.4rem; color: #9ca3af;">•</span>&nbsp; <span>${readablePhone}</span>
-    `;
+    document.getElementById('emailDisplay').textContent = readableEmail;
+document.getElementById('phoneDisplay').textContent = readablePhone;
   </script>
