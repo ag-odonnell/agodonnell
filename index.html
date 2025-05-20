@@ -7,17 +7,16 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
     :root {
-      --bg: #f9fafb;
+      --bg-white: #ffffff;
+      --bg-gray: #f3f4f6;
       --text: #1f2937;
       --card-bg: white;
       --link: #2563eb;
-      --footer: #6b7280;
-      --accent: #1e40af;
+      --footer: #1f2937;
     }
 
     body {
       font-family: Arial, sans-serif;
-      background-color: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 0;
@@ -33,10 +32,9 @@
     nav.navbar {
       display: flex;
       justify-content: flex-end;
-      background-color: var(--card-bg);
+      background-color: var(--bg-white);
       padding: 1rem 2rem;
       border-bottom: 1px solid #e5e7eb;
-      position: relative;
     }
 
     nav.navbar > div {
@@ -59,11 +57,11 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: var(--card-bg);
+      background-color: var(--bg-white);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       min-width: 150px;
       top: 100%;
-      right: 0; /* SHIFT DROPDOWN LEFT IF NEAR EDGE */
+      right: 0;
       z-index: 1;
     }
 
@@ -74,11 +72,23 @@
     .section {
       max-width: 1000px;
       margin: auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
 
-    .themes, .tiles {
+    .bg-white { background-color: var(--bg-white); }
+    .bg-gray { background-color: var(--bg-gray); }
+
+    .section h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      color: #111827;
+      text-transform: uppercase;
+    }
+
+    .themes, .tiles, .external-links {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -125,13 +135,29 @@
       padding: 1rem;
     }
 
-    .connect {
+    .external-links a {
+      color: var(--link);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .external-links a::before {
+      content: "🌐 ";
+      margin-right: 5px;
+    }
+
+    .connect-line {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
       font-size: 1.1rem;
-      padding-top: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
     }
 
     .footer {
-      background-color: #1f2937;
+      background-color: var(--footer);
       color: white;
       text-align: center;
       padding: 2rem 1rem;
@@ -163,11 +189,12 @@
     </div>
   </nav>
 
-  <div class="section">
-    <h2>“...while the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”</h2>
+  <div class="section bg-white">
+    <h3>Themes</h3>
+    <h2>“…while the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”<br><small>— Arthur Conan Doyle</small></h2>
   </div>
 
-  <div class="themes">
+  <div class="section bg-gray themes">
     <a href="analytics.html">
       <div class="icon">🏛️</div>
       <div>analytics</div>
@@ -182,32 +209,46 @@
     </a>
   </div>
 
-  <div class="tiles">
-    <div class="tile">
-      <img src="assets/images/clover.webp" alt="Flowers">
-      <div>
-        <strong>Geopolitical – Europe What's That?</strong>
-        <p><a href="https://geopoliticalfutures.com/europe-whats-that" target="_blank">Read More</a></p>
+  <div class="section bg-white">
+    <h3>Fresh Projects</h3>
+    <div class="tiles">
+      <div class="tile">
+        <img src="assets/images/clover.webp" alt="Flowers">
+        <div>
+          <strong>Geopolitical – Europe What's That?</strong>
+          <p><a href="https://geopoliticalfutures.com/europe-whats-that" target="_blank">Read More</a></p>
+        </div>
       </div>
-    </div>
-    <div class="tile">
-      <img src="assets/images/clover.webp" alt="River">
-      <div>
-        <strong>Michael Saylor Bitcoin for Corporations 2025 Keynote</strong>
-        <p><a href="#" target="_blank">Read More</a></p>
+      <div class="tile">
+        <img src="assets/images/clover.webp" alt="River">
+        <div>
+          <strong>Michael Saylor Bitcoin for Corporations 2025 Keynote</strong>
+          <p><a href="#" target="_blank">Read More</a></p>
+        </div>
       </div>
-    </div>
-    <div class="tile">
-      <img src="assets/images/clover.webp" alt="Mountain">
-      <div>
-        <strong>Kary Mullis talks about the Scientific Process</strong>
-        <p><a href="https://www.youtube.com/watch?v=LNOtiRB3uyk" target="_blank">Read More</a></p>
+      <div class="tile">
+        <img src="assets/images/clover.webp" alt="Mountain">
+        <div>
+          <strong>Kary Mullis talks about the Scientific Process</strong>
+          <p><a href="https://www.youtube.com/watch?v=LNOtiRB3uyk" target="_blank">Read More</a></p>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="section connect">
-    <div id="contactDisplay"></div>
+  <div class="section bg-gray">
+    <h3>External Presence</h3>
+    <div class="external-links">
+      <a href="https://github.com/agodonnell" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/ag-odonnell-64691ba9/" target="_blank">LinkedIn</a>
+      <a href="https://x.com/AGODonnell" target="_blank">X</a>
+      <a href="https://www.strava.com/athletes/28160078" target="_blank">Strava</a>
+    </div>
+  </div>
+
+  <div class="section bg-white">
+    <h3>Connect</h3>
+    <div class="connect-line" id="contactDisplay"></div>
   </div>
 
   <div class="footer">
@@ -215,7 +256,6 @@
   </div>
 
   <script>
-    // Email & phone scrambling (human-visible only)
     const scrambled = {
       email: ['agod', 'onnell', '@', 'yahoo', '.', 'com'],
       phone: ['713', '.', '364', '.', '5241']
@@ -225,8 +265,7 @@
     const readablePhone = scrambled.phone.join('');
 
     document.getElementById('contactDisplay').innerHTML = `
-      <div>${readableEmail}</div>
-      <div>${readablePhone}</div>
+      <span>${readableEmail}</span> &nbsp;·&nbsp; <span>${readablePhone}</span>
     `;
   </script>
 
