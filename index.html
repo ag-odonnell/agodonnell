@@ -63,6 +63,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       min-width: 150px;
       top: 100%;
+      right: 0; /* SHIFT DROPDOWN LEFT IF NEAR EDGE */
       z-index: 1;
     }
 
@@ -122,6 +123,11 @@
 
     .tile div {
       padding: 1rem;
+    }
+
+    .connect {
+      font-size: 1.1rem;
+      padding-top: 1rem;
     }
 
     .footer {
@@ -200,10 +206,12 @@
     </div>
   </div>
 
-  <div class="footer">
+  <div class="section connect">
     <div id="contactDisplay"></div>
-    <br>
-    &copy; 2025 AG O'Donnell · agodonnell.com · Presentation: Analytic Endeavor
+  </div>
+
+  <div class="footer">
+    &copy; MMXXV AG O'Donnell · agodonnell.com
   </div>
 
   <script>
@@ -217,8 +225,8 @@
     const readablePhone = scrambled.phone.join('');
 
     document.getElementById('contactDisplay').innerHTML = `
-      <div><strong>Universal:</strong> ${readableEmail}</div>
-      <div><strong>Houston, Texas:</strong> ${readablePhone}</div>
+      <div>${readableEmail}</div>
+      <div>${readablePhone}</div>
     `;
   </script>
 
