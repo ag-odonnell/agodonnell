@@ -297,7 +297,6 @@
       <div>
         <span id="nameDisplay"></span><br />
         <span id="emailDisplay"></span><br />
-        <span id="phoneDisplay"></span>
       </div>
     </div>
   </div>
@@ -309,13 +308,11 @@
   <script>
     const scrambled = {
       name: ['A', 'G', ' ', "O", "'", 'Donnell'],
-      email: ['a', 'g', 'o', 'd', 'onnell', '@', 'yahoo', '.', 'com'],
-      phone: ['7','1','3', '.', '3', '6', '4', '.', '5', '2', '4', '1']
+      email: ['a', 'g', 'o', 'd', 'onnell', '@', 'yahoo', '.', 'com']
     };
 
     document.getElementById('nameDisplay').textContent = scrambled.name.join('');
     document.getElementById('emailDisplay').textContent = scrambled.email.join('');
-    document.getElementById('phoneDisplay').textContent = scrambled.phone.join('');
 
     function disableKeys(e) {
       const forbidden = [
