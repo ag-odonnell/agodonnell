@@ -77,11 +77,14 @@
       text-align: center;
     }
 
-    .themes {
+    .themes, .tiles {
       display: flex;
       justify-content: center;
-      gap: 3rem;
-      margin: 2rem 0;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
     }
 
     .themes a {
@@ -101,14 +104,6 @@
       justify-content: center;
       font-size: 2rem;
       color: white;
-    }
-
-    .tiles {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 2rem 0;
     }
 
     .tile {
@@ -166,7 +161,7 @@
     <h2>“...while the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”</h2>
   </div>
 
-  <div class="section themes">
+  <div class="themes">
     <a href="analytics.html">
       <div class="icon">🏛️</div>
       <div>analytics</div>
@@ -181,9 +176,8 @@
     </a>
   </div>
 
-  <div class="section tiles">
+  <div class="tiles">
     <div class="tile">
-      <!-- <img src="assets/images/flowers.jpg" alt="Flowers"> -->
       <img src="assets/images/clover.webp" alt="Flowers">
       <div>
         <strong>Geopolitical – Europe What's That?</strong>
@@ -191,7 +185,6 @@
       </div>
     </div>
     <div class="tile">
-      <!-- <img src="assets/images/river.jpg" alt="River"> -->
       <img src="assets/images/clover.webp" alt="River">
       <div>
         <strong>Michael Saylor Bitcoin for Corporations 2025 Keynote</strong>
@@ -199,7 +192,6 @@
       </div>
     </div>
     <div class="tile">
-      <!-- <img src="assets/images/mountain.jpg" alt="Mountain"> -->
       <img src="assets/images/clover.webp" alt="Mountain">
       <div>
         <strong>Kary Mullis talks about the Scientific Process</strong>
