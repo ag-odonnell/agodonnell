@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>agodonnell.com</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <style>
@@ -90,7 +91,7 @@
     }
 
     .section h3::after {
-      content: "••••••••••    ▼    •••••••••••";
+      content: "••••••••••    ▼    ••••••••••";
       display: block;
       margin-top: 1.25rem;
       font-size: 1.4rem;
@@ -186,10 +187,16 @@
     }
   </style>
 </head>
-<body>
-<header>
-  <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
-</header>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
+  </header>
 
   <nav class="navbar">
     <div class="dropdown">
@@ -285,31 +292,51 @@
   </div>
 
   <div class="section bg-white">
-  <h3>Connect</h3>
-  <div class="connect-line">
-    <div>
-      <span id="emailDisplay"></span><br />
-      <span id="phoneDisplay"></span>
+    <h3>Connect</h3>
+    <div class="connect-line">
+      <div>
+        <span id="nameDisplay"></span><br />
+        <span id="emailDisplay"></span><br />
+        <span id="phoneDisplay"></span>
+      </div>
     </div>
   </div>
-</div>
 
   <div class="footer">
-    &copy; MMXXV · AG O'Donnell · agodonnell.com
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com
   </div>
 
   <script>
     const scrambled = {
-      email: ['agod', 'onnell', '@', 'yahoo', '.', 'com'],
-      phone: ['713', '.', '364', '.', '5241']
+      name: ['A', 'G', ' ', "O", "'", 'Donnell'],
+      email: ['a', 'g', 'o', 'd', 'onnell', '@', 'yahoo', '.', 'com'],
+      phone: ['7','1','3', '.', '3', '6', '4', '.', '5', '2', '4', '1']
     };
 
-    const readableEmail = scrambled.email.join('');
-    const readablePhone = scrambled.phone.join('');
+    document.getElementById('nameDisplay').textContent = scrambled.name.join('');
+    document.getElementById('emailDisplay').textContent = scrambled.email.join('');
+    document.getElementById('phoneDisplay').textContent = scrambled.phone.join('');
 
-    document.getElementById('emailDisplay').textContent = readableEmail;
-    document.getElementById('phoneDisplay').textContent = readablePhone;
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
   </script>
-
 </body>
 </html>
