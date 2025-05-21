@@ -61,19 +61,38 @@ nav.navbar a {
   display: block;
 }
 
-.section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
 .bg-white {
   background-color: var(--bg-white);
 }
 
 .bg-gray {
   background-color: var(--bg-gray);
+}
+
+.intro h1 {
+  font-size: 1.75rem;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 1000px;
+  margin: 0 auto 1.75rem;
+  text-align: justify;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+.profile-photo {
+  display: block;
+  margin: 2rem auto;
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .quote {
@@ -92,21 +111,11 @@ nav.navbar a {
   font-weight: 400;
 }
 
-.intro h1 {
-  font-size: 1.75rem;
-  color: #374151;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-}
-
-.intro p {
-  font-size: 1.1rem;
-  color: #6b7280;
+.section {
   max-width: 1000px;
-  margin: 0 auto 1.75rem;
-  text-align: justify;
-  line-height: 1.9;
-  font-weight: 400;
+  margin: auto;
+  padding: 3rem 1rem;
+  text-align: center;
 }
 
 .section h3 {
