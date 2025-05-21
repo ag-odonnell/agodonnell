@@ -20,6 +20,7 @@
   </header>
 
   <nav class="navbar">
+    <a href="index.html">Home</a>
     <div class="dropdown">
       <a href="themes.html">Themes</a>
       <div class="dropdown-content">
@@ -151,14 +152,6 @@
   </div>
 
   <script>
-    const scrambled = {
-      name: ['A', 'G', ' ', "O", "'", 'Donnell'],
-      email: ['a', 'g', 'o', 'd', 'onnell', '@', 'yahoo', '.', 'com']
-    };
-
-    document.getElementById('nameDisplay').textContent = scrambled.name.join('');
-    document.getElementById('emailDisplay').textContent = scrambled.email.join('');
-
     function disableKeys(e) {
       const forbidden = [
         { key: "u", ctrl: true },
