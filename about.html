@@ -38,51 +38,53 @@
   </nav>
 
   <main>
-    <section class="content">
-      <h1>About</h1>
+    <div class="section bg-white">
+        <div class="intro">
+        <h1>About</h1>
 
-      <h3><em>Some words about A.G. O'Donnell</em></h3>
-      <ul>
-        <li>Hi there! I was born in a small town in the United States of America. I've lived much of my life in Texas and have spent a lot of time in Mexico as both a child and an adult.</li>
-        <li>I was fortunate enough to gain admittance to the university in Austin and do believe in their motto.</li>
-      </ul>
+        <h3><em>Some words about A.G. O'Donnell</em></h3>
+        <ul>
+            <li>Hi there! I was born in a small town in the United States of America. I've lived much of my life in Texas and have spent a lot of time in Mexico as both a child and an adult.</li>
+            <li>I was fortunate enough to gain admittance to the university in Austin and do believe in their motto.</li>
+        </ul>
 
-      <blockquote>
-        “What starts here changes the world.” – The University of Texas at Austin
-      </blockquote>
+        <blockquote>
+            “What starts here changes the world.” – The University of Texas at Austin
+        </blockquote>
 
-      <img src="/assets/images/ago.webp" alt="The Tower" style="max-width: 100%; height: auto;" />
+        <img src="/assets/images/ago.webp" alt="The Tower" style="max-width: 100%; height: auto;" />
 
-      <h3><em>Some more about my path</em></h3>
-      <ul>
-        <li>I originally pursued a skill set in Finance, back when the business school was named after Dr. Kozmetsky. As I matured, I worked with private equity firms, wire houses and investment banks.</li>
-        <li>My specialization became figuring out how to finance a client’s desired entry into new markets. This evolved into identifying relevant indicators that could be used to track performance and model expectations.</li>
-        <li>Eventually, probability of success indicators were derived to aide with the evaluation of competing strategies.</li>
-      </ul>
+        <h3><em>Some more about my path</em></h3>
+        <ul>
+            <li>I originally pursued a skill set in Finance, back when the business school was named after Dr. Kozmetsky. As I matured, I worked with private equity firms, wire houses and investment banks.</li>
+            <li>My specialization became figuring out how to finance a client’s desired entry into new markets. This evolved into identifying relevant indicators that could be used to track performance and model expectations.</li>
+            <li>Eventually, probability of success indicators were derived to aide with the evaluation of competing strategies.</li>
+        </ul>
 
-      <h3><em>A change in direction</em></h3>
-      <ul>
-        <li>Data became an obsession and its pursuit required the development of a complementary set of skills. Upon the embarkment of the new journey, Northwestern University had a premier Predictive Analytics Master of Science program. So, I pursued their teachings.</li>
-        <li>A lot depends on understanding how to frame a problem, however programming skills are also very important. They take a lot of time to develop. Maybe it requires the 10,000 hours discussed by Mr. Gladwell in his book. I'm not sure. I can say that one must invest much time figuring out how to create concise thoughts and convey them in the form of a programming language.</li>
-      </ul>
+        <h3><em>A change in direction</em></h3>
+        <ul>
+            <li>Data became an obsession and its pursuit required the development of a complementary set of skills. Upon the embarkment of the new journey, Northwestern University had a premier Predictive Analytics Master of Science program. So, I pursued their teachings.</li>
+            <li>A lot depends on understanding how to frame a problem, however programming skills are also very important. They take a lot of time to develop. Maybe it requires the 10,000 hours discussed by Mr. Gladwell in his book. I'm not sure. I can say that one must invest much time figuring out how to create concise thoughts and convey them in the form of a programming language.</li>
+        </ul>
 
-      <h3><em>A fun reality</em></h3>
-      <ul>
-        <li>The completion of time well spent has been fulfilled by contracts with both small and large entities that work with big and little data.</li>
-        <li>I create efficient links to, prepare and analyze data streams. I can access APIs, process algorithms in the cloud and store output to a database in another place.</li>
-        <li>Each project requires planning, some new learning and solid execution.</li>
-      </ul>
+        <h3><em>A fun reality</em></h3>
+        <ul>
+            <li>The completion of time well spent has been fulfilled by contracts with both small and large entities that work with big and little data.</li>
+            <li>I create efficient links to, prepare and analyze data streams. I can access APIs, process algorithms in the cloud and store output to a database in another place.</li>
+            <li>Each project requires planning, some new learning and solid execution.</li>
+        </ul>
 
-      <blockquote>
-        “Companies don’t magically develop those competencies just because they’ve invested in high-end analytics tools. They first need to learn how to use the data already embedded in their core operating systems, much the way people must master arithmetic before they tackle algebra. Until a company learns how to use data and analysis to support its operating decisions, it will not be in a position to benefit from big data.”
-      </blockquote>
+        <blockquote>
+            “Companies don’t magically develop those competencies just because they’ve invested in high-end analytics tools. They first need to learn how to use the data already embedded in their core operating systems, much the way people must master arithmetic before they tackle algebra. Until a company learns how to use data and analysis to support its operating decisions, it will not be in a position to benefit from big data.”
+        </blockquote>
 
-      <blockquote>
-        “This is not a story about big data, or even about big investments in data. This is a story about a lot of little data. More important, it’s about betting your business success on the ability of good people to use good data to make good decisions.” – Harvard Business Review
-      </blockquote>
+        <blockquote>
+            “This is not a story about big data, or even about big investments in data. This is a story about a lot of little data. More important, it’s about betting your business success on the ability of good people to use good data to make good decisions.” – Harvard Business Review
+        </blockquote>
 
-      <p><strong>Let’s visit!</strong></p>
-    </section>
+        <p><strong>Let’s visit!</strong></p>
+        </div>
+    </div>
   </main>
 
   <div class="footer">
@@ -90,14 +92,6 @@
   </div>
 
   <script>
-    const scrambled = {
-      name: ['A', 'G', ' ', "O", "'", 'Donnell'],
-      email: ['a', 'g', 'o', 'd', 'onnell', '@', 'yahoo', '.', 'com']
-    };
-
-    document.getElementById('nameDisplay').textContent = scrambled.name.join('');
-    document.getElementById('emailDisplay').textContent = scrambled.email.join('');
-
     function disableKeys(e) {
       const forbidden = [
         { key: "u", ctrl: true },
