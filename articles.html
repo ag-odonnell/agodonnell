@@ -5,160 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Articles | agodonnell.com</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>About - agodonnell.com</title>
   <link rel="stylesheet" href="/style.css" />
-  <style>
-    :root {
-      --bg: #f9fafb;
-      --text: #1f2937;
-      --card-bg: white;
-      --link: #2563eb;
-      --footer: #6b7280;
-    }
-
-    body.dark-mode {
-      --bg: #1e1e1e;
-      --text: #f3f4f6;
-      --card-bg: #2a2a2a;
-      --link: #93c5fd;
-      --footer: #9ca3af;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: 1px solid var(--text);
-      border-radius: 4px;
-      padding: 6px 12px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      color: var(--text);
-      background-color: var(--card-bg);
-      transition: all 0.3s ease;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background: var(--card-bg);
-    }
-
-    .profile {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-
-    .profile img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      object-position: 100% center;
-      border-radius: 50%;
-      border: 4px solid var(--card-bg);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-top: 1rem;
-      text-align: center;
-      color: var(--text);
-    }
-
-    .article-list {
-      margin-top: 2rem;
-    }
-
-    .article-item {
-      margin-bottom: 2rem;
-    }
-
-    .article-item a {
-      font-weight: bold;
-      color: var(--link);
-      text-decoration: none;
-    }
-
-    .article-item a:hover {
-      text-decoration: underline;
-    }
-
-    .article-item p {
-      font-size: 0.95rem;
-      color: var(--footer);
-      margin: 0.5rem 0 0;
-    }
-
-    .article-item .tags {
-      font-size: 0.85rem;
-      color: var(--footer);
-      text-align: right;
-      margin-top: 0.25rem;
-    }
-
-    .navbar {
-      background-color: var(--card-bg);
-      padding: 0.75rem 1.5rem;
-      text-align: right;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      border-bottom: 1px solid #e5e7eb;
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: flex-end;
-      gap: 1.5rem;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: var(--card-bg);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      padding: 0.5rem 0;
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: var(--text);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .dropdown-content a:hover {
-      background-color: var(--bg);
-    }
-  </style>
 </head>
-
 <body
   oncontextmenu="return false"
   oncopy="return false"
@@ -166,13 +15,11 @@
   onpaste="return false"
   onkeydown="return disableKeys(event)"
 >
-
-  <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
-
   <header>
-    <img src="assets/images/clover.webp" alt="Clover leaves with dew drops" />
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
   </header>
 
+  <!-- Navigation bar with dropdowns -->
   <nav class="navbar">
     <a href="index.html">Home</a>
     <div class="dropdown">
@@ -184,19 +31,15 @@
       </div>
     </div>
     <div class="dropdown">
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <div class="dropdown-content">
         <a href="cv.html">Curriculum Vitae</a>
         <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
-    <a href="articles.html" class="active">Articles</a>
   </nav>
 
   <main class="container">
-    <div class="profile">
-      <img src="assets/images/ago.jpg" alt="AG O'Donnell Profile Photo" />
-    </div>
 
     <h1>Interesting Articles</h1>
 
@@ -211,16 +54,11 @@
     </div>
   </main>
 
-  <footer style="text-align:center; font-size:0.85rem; color:var(--footer); padding:2rem 1rem;">
-    © <span id="year"></span> agodonnell.com — All rights reserved.
-  </footer>
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
 
   <script>
-    function toggleDarkMode() {
-      const isDark = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
-
     function disableKeys(e) {
       const forbidden = [
         { key: "u", ctrl: true },
@@ -240,7 +78,6 @@
       if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
       }
-      document.getElementById("year").textContent = new Date().getFullYear();
     };
   </script>
 </body>
