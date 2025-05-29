@@ -207,27 +207,32 @@ nav.navbar > div {
   border: 1px solid #e5e7eb;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   border-radius: 0.5rem;
+  text-align: left; /* 👈 Key change */
 }
 
 .quote-item blockquote {
   margin: 0;
   padding: 0;
-  font-style: italic;
-  color: var(--text);
+  font-style: normal;
+  font-size: 1.25rem; /* 👈 Larger like hyperlinks */
+  color: var(--link); /* 👈 Blue like article titles */
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .quote-item footer {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   font-size: 0.9rem;
   color: var(--footer);
-  text-align: right;
+  text-align: left; /* 👈 Aligned to quote */
+  font-weight: 500;
 }
 
 .quote-item .tags {
   font-size: 0.85rem;
   color: var(--footer);
-  text-align: right;
-  margin-top: 0.5rem;
+  text-align: left; /* 👈 Same alignment */
+  margin-top: 0.25rem;
 }
 
 .section {
