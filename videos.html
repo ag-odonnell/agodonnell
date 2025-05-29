@@ -15,14 +15,10 @@
   onpaste="return false"
   onkeydown="return disableKeys(event)"
 >
-  <!-- Dark mode toggle -->
-  <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
-
-  <!-- Header image -->
   <header>
     <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
   </header>
-  
+
   <!-- Navigation bar with dropdowns -->
   <nav class="navbar">
     <a href="index.html">Home</a>
@@ -43,6 +39,7 @@
     </div>
   </nav>
 
+  <main class="container">
     <h1>Interesting Videos</h1>
 
     <div class="video-list">
@@ -80,18 +77,11 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <div class="footer">
     &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
   </div>
 
-  <!-- Scripts -->
   <script>
-    function toggleDarkMode() {
-      const isDark = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
-
     function disableKeys(e) {
       const forbidden = [
         { key: "u", ctrl: true },
