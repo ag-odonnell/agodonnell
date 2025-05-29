@@ -222,17 +222,19 @@ nav.navbar > div {
 
 .quote-item footer {
   margin-top: 0.75rem;
-  font-size: 0.9rem;
-  color: var(--footer);
+  font-size: 0.95rem;
+  color: #6b7280; /* Same as .article-item p */
   text-align: left; /* 👈 Aligned to quote */
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .quote-item .tags {
   font-size: 0.85rem;
-  color: var(--footer);
-  text-align: left; /* 👈 Same alignment */
   margin-top: 0.25rem;
+  color: #9ca3af; /* Match article tags */
+  text-align: left; /* 👈 Same alignment */
+  font-weight: 400;
 }
 
 .section {
