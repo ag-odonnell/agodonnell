@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,119 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Quotes | agodonnell.com</title>
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <style>
-    :root {
-      --bg: #f9fafb;
-      --text: #1f2937;
-      --card-bg: white;
-      --link: #2563eb;
-      --footer: #6b7280;
-    }
-
-    body.dark-mode {
-      --bg: #1e1e1e;
-      --text: #f3f4f6;
-      --card-bg: #2a2a2a;
-      --link: #93c5fd;
-      --footer: #9ca3af;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .navbar {
-      background-color: var(--card-bg);
-      padding: 0.75rem 1.5rem;
-      text-align: right;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      border-bottom: 1px solid #e5e7eb;
-      margin-bottom: 1rem;
-    }
-
-    .navbar a {
-      margin-left: 15px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.2s ease;
-    }
-
-    .navbar a:hover {
-      color: var(--link);
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: 1px solid var(--text);
-      border-radius: 4px;
-      padding: 6px 12px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      color: var(--text);
-      background-color: var(--card-bg);
-      transition: all 0.3s ease;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background: var(--card-bg);
-    }
-
-    .profile {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-
-    .profile img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      object-position: 100% center;
-      border-radius: 50%;
-      border: 4px solid var(--card-bg);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-top: 1rem;
-      text-align: center;
-      color: var(--text);
-    }
-
-    blockquote {
-      margin: 2rem auto;
-      padding: 1rem 1.5rem;
-      border-left: 4px solid var(--link);
-      background-color: var(--bg);
-      font-style: italic;
-    }
-
-    blockquote footer {
-      font-size: 0.9rem;
-      color: var(--footer);
-      margin-top: 0.5rem;
-      text-align: right;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body
@@ -129,80 +16,80 @@
   onpaste="return false"
   onkeydown="return disableKeys(event)"
 >
-
-  <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Dark Mode</button>
-
   <header>
-    <img src="assets/images/clover.webp" alt="Clover leaves with dew drops" />
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
   </header>
 
-  <!-- ✅ Nav bar now placed below the header, like index.html -->
+  <!-- Navigation bar with dropdowns -->
   <nav class="navbar">
     <a href="index.html">Home</a>
-    <a href="quotes.html">Quotes</a>
+    <div class="dropdown">
+      <a href="themes.html" class="active">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
   </nav>
 
-  <div class="container">
-
-    <div class="profile">
-      <img src="assets/images/ago.jpg" alt="AG O'Donnell Profile Photo" />
-    </div>
-
+  <main class="container">
     <h1>Collected Quotes</h1>
 
     <blockquote>
       “Without a vision the people will perish.”
       <footer>— King Solomon, <cite>Proverbs 29:18</cite></footer>
-      <div style="font-size: 0.85rem; color: var(--footer); text-align: right;">#bible</div>
+      <div class="tags">#bible</div>
     </blockquote>
 
     <blockquote>
-        “While the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”
-        <footer>— Sir Arthur Conan Doyle <cite>(via Sherlock Holmes)</cite></footer>
-        <div style="font-size: 0.85rem; color: var(--footer); text-align: right;">#statistics</div>
+      “While the individual man is an insoluble puzzle, in the aggregate he becomes a mathematical certainty.”
+      <footer>— Sir Arthur Conan Doyle <cite>(via Sherlock Holmes)</cite></footer>
+      <div class="tags">#statistics</div>
     </blockquote>
 
     <blockquote>
       “What starts here changes the world.”
       <footer>— The University of Texas at Austin</footer>
-      <div style="font-size: 0.85rem; color: var(--footer); text-align: right;">#texas</div>
+      <div class="tags">#utexas</div>
     </blockquote>
-
 
     <blockquote>
       “Companies don’t magically develop those competencies just because they’ve invested in high-end analytics tools. 
       They first need to learn how to use the data already embedded in their core operating systems, 
       much the way people must master arithmetic before they tackle algebra. 
       Until a company learns how to use data and analysis to support its operating decisions, 
-      it will not be in a position to benefit from data.”
-      <footer>— Harvard Business Review</footer>
-      <div style="font-size: 0.85rem; color: var(--footer); text-align: right;">#data</div>
+      it will not be in a position to benefit from data.”      <footer>— Harvard Business Review</footer>
+      <div class="tags">#data</div>
     </blockquote>
-
 
     <blockquote>
       “This is not a story about big data, or even about big investments in data. 
       This is a story about a lot of little data. 
       More important, it’s about betting your business success on the ability of good people to use good data to make good decisions.”
       <footer>— Harvard Business Review</footer>
-      <div style="font-size: 0.85rem; color: var(--footer); text-align: right;">#data</div>
+      <div class="tags">#data</div>
     </blockquote>
-
 
     <blockquote>
       “The best way to predict the future is to invent it.”
       <footer>— Alan Kay</footer>
-      <div style="font-size: 0.85rem; color: var(--footer); text-align: right;">#entrepreneur</div>
+      <div class="tags">#entrepreneur</div>
     </blockquote>
+  </main>
 
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
   </div>
 
   <script>
-    function toggleDarkMode() {
-      const isDark = document.body.classList.toggle("dark-mode");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
-
     function disableKeys(e) {
       const forbidden = [
         { key: "u", ctrl: true },
@@ -224,6 +111,5 @@
       }
     };
   </script>
-
 </body>
 </html>
