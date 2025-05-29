@@ -15,6 +15,7 @@
   onpaste="return false"
   onkeydown="return disableKeys(event)"
 >
+  <!-- Header image -->
   <header>
     <img src="assets/images/mountain_snow.webp" alt="Hero Image of Mountain Snow">
   </header>
@@ -39,11 +40,12 @@
     </div>
   </nav>
 
+  <!-- Main content area -->
   <main class="container">
     <h1>Interesting Videos</h1>
 
-    <div class="video-list">
-      <div class="video-item">
+    <div class="article-list">
+      <div class="article-item">
         <a href="https://www.youtube.com/watch?v=id4YRO7G0wE" target="_blank" rel="noopener noreferrer">
           The AI Revolution Is Underhyped | Eric Schmidt
         </a>
@@ -51,7 +53,7 @@
         <div class="tags">#AI #technology #future</div>
       </div>
 
-      <div class="video-item">
+      <div class="article-item">
         <a href="https://www.youtube.com/watch?v=3-vBBYEXv6M" target="_blank" rel="noopener noreferrer">
           Bitcoin for Corporations 2025 Keynote | Michael Saylor
         </a>
@@ -59,7 +61,7 @@
         <div class="tags">#bitcoin #corporate #strategy</div>
       </div>
 
-      <div class="video-item">
+      <div class="article-item">
         <a href="https://www.youtube.com/watch?v=ONIexChUpuw&t=17s" target="_blank" rel="noopener noreferrer">
           Opening Keynote: The Future of Commerce
         </a>
@@ -67,7 +69,7 @@
         <div class="tags">#payments #commerce #stripe</div>
       </div>
 
-      <div class="video-item">
+      <div class="article-item">
         <a href="https://www.youtube.com/watch?v=LNOtiRB3uyk" target="_blank" rel="noopener noreferrer">
           Kary Mullis: Celebrating the Scientific Experiment
         </a>
@@ -77,10 +79,12 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <div class="footer">
     &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
   </div>
 
+  <!-- Scripts -->
   <script>
     function disableKeys(e) {
       const forbidden = [
