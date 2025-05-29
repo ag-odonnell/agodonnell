@@ -7,10 +7,11 @@
   --footer: #1f2937;
 }
 
+/* === Article Layout === */
 .article-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* Adds vertical spacing between items */
+  gap: 2rem;
   margin-top: 2rem;
 }
 
@@ -50,6 +51,7 @@
   color: #9ca3af;
 }
 
+/* === Global & Layout === */
 body {
   font-family: Arial, sans-serif;
   color: var(--text);
@@ -317,4 +319,56 @@ nav.navbar > div {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+}
+
+/* === New Video List Style (to match article list) === */
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.video-item {
+  padding: 1rem 1.25rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.video-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.video-thumb {
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-gray);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.video-info h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: bold;
+  color: var(--link);
+}
+
+.video-info h3:hover {
+  text-decoration: underline;
+}
+
+.video-meta {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
