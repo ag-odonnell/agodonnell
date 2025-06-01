@@ -67,6 +67,38 @@ body {
   background-color: var(--bg-white);
 }
 
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.book-tile {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.book-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.book-tile a {
+  color: var(--link);
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.book-tile a:hover {
+  text-decoration: underline;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
