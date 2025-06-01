@@ -99,6 +99,13 @@ body {
   text-decoration: underline;
 }
 
+.book-tile .author {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: normal;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
