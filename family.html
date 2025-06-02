@@ -115,12 +115,22 @@
       const container = document.getElementById("collage");
       const shuffled = shuffleArray(imageFilenames.slice());
 
+      <!-- 
       shuffled.forEach(name => {
         const img = document.createElement("img");
         img.src = `assets/images/family/${name}`;
         img.alt = name.replace(".webp", "");
         img.loading = "lazy"; // 👈 this line enables lazy loading
         img.className = sizeClasses[Math.floor(Math.random() * sizeClasses.length)];
+        container.appendChild(img);
+      });
+       -->
+
+      shuffled.forEach(name => {
+        const img = document.createElement("img");
+        img.src = `assets/images/family/${name}`;
+        img.alt = name.replace(".webp", "");
+        img.loading = "lazy";
         container.appendChild(img);
       });
     }
