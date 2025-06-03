@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Analytics Projects - agodonnell.com</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body
+  oncontextmenu="return false"
+  oncopy="return false"
+  oncut="return false"
+  onpaste="return false"
+  onkeydown="return disableKeys(event)"
+>
+  <header>
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image" />
+  </header>
 
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="themes.html">Themes</a>
+      <div class="dropdown-content">
+        <a href="family.html">Family</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="fitness.html">Fitness</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="cv.html">CV</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content">
+    <section class="intro">
+      <h1>Analytics Projects</h1>
+      <p>This section will showcase public-facing analytics projects, prototypes, and experiments. These projects reflect work completed or in-progress across domains like healthcare, energy, DeFi, and data engineering infrastructure.</p>
+      <p>Over time, this space will grow to include:</p>
+      <ul>
+        <li>⚙️ Reproducible data pipelines and dashboard examples</li>
+        <li>📊 Custom visualizations for exploratory data analysis</li>
+        <li>🤖 ML workflows using Databricks, Snowflake, and Python</li>
+        <li>🔍 Case studies of real-world problem solving and automation</li>
+      </ul>
+      <p>While still under development, this area reflects a forward-looking intent: to share knowledge, tools, and insights useful to collaborators, employers, and peers.</p>
+    </section>
+
+    <section class="project-tiles">
+      <!-- Placeholder for future project cards -->
+      <div class="article-list">
+        <div class="article-item">
+          <h2>Coming Soon</h2>
+          <p>Project case studies and walkthroughs will appear here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="nameDisplay"></p>
+    <p>Email: <span id="emailDisplay"></span></p>
+    <script src="scripts/obfuscate.js"></script>
+    <p>&copy; <span id="year"></span> All rights reserved.</p>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
