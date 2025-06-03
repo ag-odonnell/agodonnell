@@ -204,6 +204,17 @@ header img {
   font-weight: 400;
 }
 
+.intro li {
+  margin-bottom: 0.5rem;
+}
+
+.intro ul {
+  text-align: left;
+  margin-left: 2rem;
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
 @media (max-width: 900px) {
   .collage {
     column-count: 2;
