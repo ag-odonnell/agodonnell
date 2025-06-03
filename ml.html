@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Machine Learning - agodonnell.com</title>
-  <link rel="stylesheet" href="/style.css" />
+  <title>Machine Learning Projects – agodonnell.com</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body
   oncontextmenu="return false"
@@ -15,13 +15,13 @@
   onkeydown="return disableKeys(event)"
 >
   <header>
-    <img src="assets/images/ml_banner.webp" alt="Machine Learning Banner" />
+    <img src="assets/images/mountain_snow.webp" alt="Hero Image" />
   </header>
 
   <nav class="navbar">
     <a href="index.html">Home</a>
     <div class="dropdown">
-      <a href="themes.html">Themes</a>
+      <a href="themes.html" class="active">Themes</a>
       <div class="dropdown-content">
         <a href="family.html">Family</a>
         <a href="analytics.html">Analytics</a>
@@ -32,41 +32,79 @@
     <div class="dropdown">
       <a href="about.html">About</a>
       <div class="dropdown-content">
-        <a href="cv.html">CV</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="cv.html">Curriculum Vitae</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
   </nav>
 
-  <main class="content">
-    <section class="intro">
+  <div class="section bg-white">
+    <div class="intro">
       <h1>Machine Learning Projects</h1>
-      <p>This section will grow to highlight public-facing machine learning projects that showcase applied techniques in classification, forecasting, generative modeling, and production deployment.</p>
-      <p>Many of these efforts stem from practical data engineering workflows or experimental tuning across platforms like Databricks, Snowflake, and custom pipelines. Topics may include MLflow tracking, Hyperopt tuning, model explainability, and streaming inference.</p>
-      <p>Stay tuned—this space is under active development and will include both technical demonstrations and contextual writeups.</p>
-    </section>
+      <p>This section will showcase applied machine learning projects, infrastructure pipelines, and deployment experiments. Projects may focus on classification, forecasting, embedding techniques, or inference optimization using platforms like Databricks, Snowflake, and MLflow.</p>
+      <p>In time, this section will grow to include:</p>
+      <ul>
+        <li>📈 Model training pipelines with MLflow tracking</li>
+        <li>🧪 Hyperparameter tuning and validation experiments</li>
+        <li>☁️ Cloud deployments using FastAPI and serverless endpoints</li>
+        <li>🛠️ Monitoring, logging, and post-deployment model drift detection</li>
+      </ul>
+      <p>Though currently under development, this page will serve as a technical showcase for current and future collaborators.</p>
+    </div>
+  </div>
 
-    <section class="card-grid">
-      <div class="card placeholder-card">
-        <h2>Coming Soon</h2>
-        <p>MLflow + Databricks Pipeline</p>
+  <div class="section bg-gray">
+    <h3>Project Highlights</h3>
+    <div class="tiles">
+      <div class="tile">
+        <img src="assets/images/mountain_stream.webp" alt="MLflow Tracking">
+        <div>
+          <strong>Coming Soon</strong>
+          <p>ML pipeline with tracking, registry, and artifact storage using MLflow + Databricks.</p>
+        </div>
       </div>
-      <div class="card placeholder-card">
-        <h2>Coming Soon</h2>
-        <p>Time Series Forecasting with Snowflake + Python</p>
+      <div class="tile">
+        <img src="assets/images/snow_mountain.webp" alt="FastAPI Serving">
+        <div>
+          <strong>FastAPI Deployment</strong>
+          <p>Model serving and health-check routing with Pydantic schema enforcement.</p>
+        </div>
       </div>
-      <div class="card placeholder-card">
-        <h2>Coming Soon</h2>
-        <p>Deployment Playbook: Flask, FastAPI, or Lambda</p>
+      <div class="tile">
+        <img src="assets/images/placeholder.webp" alt="Forecasting Prototype">
+        <div>
+          <strong>Time Series Forecasting</strong>
+          <p>Local prototype blending ARIMA + LSTM for short-horizon health metrics.</p>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; <span id="yearDisplay"></span> <span id="nameDisplay"></span>. All rights reserved.</p>
-    <p>Email: <span id="emailDisplay"></span></p>
-  </footer>
+  <div class="footer">
+    &copy; MMXXV &middot; AG O'Donnell &middot; agodonnell.com &middot; All rights reserved.
+  </div>
 
-  <script src="/scripts/obfuscate.js"></script>
+  <script>
+    function disableKeys(e) {
+      const forbidden = [
+        { key: "u", ctrl: true },
+        { key: "c", ctrl: true },
+        { key: "s", ctrl: true },
+        { key: "a", ctrl: true },
+        { key: "F12", ctrl: false }
+      ];
+      return forbidden.some(f =>
+        e.key.toLowerCase() === f.key.toLowerCase() &&
+        (f.ctrl === undefined || e.ctrlKey === f.ctrl)
+      ) ? false : true;
+    }
+
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+  </script>
 </body>
 </html>
